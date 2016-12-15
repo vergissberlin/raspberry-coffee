@@ -18,7 +18,7 @@ git pull &&\
 cat ~/.node-red/flows_coffee.json > ~/.node-red/flows_backup.json &&\
 
 # 3. Copy flow file
-cat ~/flows/flows_coffee.json > ~/.node-red/flows_coffee.json &&\
+cat ~/flows/config/flows_coffee.json > ~/.node-red/flows_coffee.json &&\
 
 # 4. Restart node-red
 sudo service nodered restart &&\
