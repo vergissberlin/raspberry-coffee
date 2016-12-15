@@ -66,6 +66,7 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 1.  ``sudo apt update && apt install git-core``
 2.  Gennerate ssh key ``ssh-keygen`` (hit _enter_ twice) and add the generated key to your deployment key list on your repository server ``cat .ssh/id_rsa.pub``
 3.  Configure _git_
+    -   ``git config --global push.default matching``
     -   ``git config --global user.name "Coffee"``
     -   ``git config --global user.email sammy@example.com``
 4.  ``git clone YOUR-REPO.git ~/flows``

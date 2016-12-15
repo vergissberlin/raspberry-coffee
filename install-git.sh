@@ -19,7 +19,12 @@ sudo apt install git-core``
 ssh-keygen
 echo "Add the generated key to your deployment key list on your repository server\n"
 cat .ssh/id_rsa.pub
-read -p "Did you have added the SSH key to your git server? Y/n "
+read -p "Did you have added the SSH key to your git server? y/n "
+if [ "$name" != "y" ]; then
+  exit 1;
+fi
+
+git config --global push.default matching
 
 # User settings
 read -p "What's you name? " name
@@ -32,4 +37,8 @@ if [ "$email" != "" ]; then
   git config --global user.email $email
 fi
 
-git clone YOUR-REPO.git ~/flows
+read -p "What's the git url? " url
+if [ "$url" != "" ]; then
+  git clone $url ~/flows
+
+fi
