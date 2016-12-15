@@ -14,11 +14,11 @@ git checkout master &&\
 git pull &&\
 
 # 2. Copy flow file
-cat ~/.node-red/flows_coffee.json > ~/flows/flows_coffee.json &&\
+cat ~/.node-red/flows_coffee.json > ~/flows/config/flows_coffee.json &&\
 
 # 3. Add and commit changes
-git add ~/.node-red/flows_coffee.json &&\
-git commit -m "Deploy new flow from Raspberry PI" >> ~/deploy.log &&\
+git add config/flows_coffee.json &&\
+git commit -am "Deploy new flow from Raspberry PI" >> ~/deploy.log &&\
 
 # 4. Push and log
 git push >> ~/deploy.log &&\
