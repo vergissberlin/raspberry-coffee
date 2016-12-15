@@ -9,18 +9,18 @@
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # 1. Update repository
-cd ~/coffee &&\
+cd ~/flows &&\
 git checkout master &&\
 git pull &&\
 
 
 # 2. Create backup
-cat ~/.node-red/flows_piball.json > ~/.node-red/flows_backup.json &&\
+cat ~/.node-red/flows_coffee.json > ~/.node-red/flows_backup.json &&\
 
 # 3. Copy flow file
-cat node-red/flows_piball.json > ~/.node-red/flows_piball.json &&\
+cat ~/.node-red/flows_coffee.json > ~/.node-red/flows_coffee.json &&\
 
 # 4. Restart node-red
-pm2 restart node-red
+sudo service nodered restart &&\
 
 exit 0;
