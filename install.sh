@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Coffee counter
+#
+# LICENSE:    MIT
+#
+# @project    coffee
+# @package    deployment
+# @author     André Lademann <vergissberlin@googlemail.com>
+
 # Install NodeRED
 sudo apt-get update
 sudo apt-get install nodered

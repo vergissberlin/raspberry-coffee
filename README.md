@@ -5,16 +5,18 @@ Holds flows for raspberry coffee waste counter with NodeRED.
 ## Installation
 
 1.  Fresh raspian package from [raspberrypi.org](https://www.raspberrypi.org/downloads/raspbian/)
-2.  Connect your device with a HDMI cable to a monitor and start the configuration process with ``raspi-config``
-    1.  Expand dis space
-    2.  Enable SSH
-    3.  Change you password
-3.  Look for the IP in network and connect with ``ssh pi@192.168.X.X`` The password is _raspberry_
-4.  Install NodeRED ``sudo apt-get update &&
+2.  Extract the _img_ file and copy to a SD-card with ``sudo dd bs=4M if=Downloads/2016-11-25-raspbian-jessie-lite.img of=/dev/mmcblk0``
+3.  Connect your device with a HDMI cable to a monitor and start the configuration process with ``raspi-config``
+    1.  Expand disk space!
+    2.  Enable SSH!
+    3.  Change your password!
+    4.  Change _hostname_ to _coffee_!
+4.  Look for the IP in network and connect with ``ssh pi@192.168.X.X`` The password is _raspberry_
+5.  Install NodeRED ``sudo apt-get update &&
 sudo apt-get install nodered``
-5.  Start NodeRED on startup ``sudo systemctl enable nodered.service``
-6.  Update node ``sudo npm cache clean -f && sudo npm install -g n && sudo n stable``   
-7.  Install additional nodes
+6.  Start NodeRED on startup ``sudo systemctl enable nodered.service``
+7.  Update node ``sudo npm cache clean -f && sudo npm install -g n && sudo n stable``   
+8.  Install additional nodes
 ````
 sudo apt-get install npm
 sudo npm install -g npm@2.x
@@ -55,3 +57,15 @@ wlan0     Link encap:Ethernet  HWaddr 14:cc:20:22:ee:21
           collisions:0 txqueuelen:1000
           RX bytes:2428 (2.3 KiB)  TX bytes:5618 (5.4 KiB)
 ```
+
+## Optional
+
+### Deployment with git
+If you wanna use git to save your flows, you have to install _git_ and create a _key_
+
+1.  ``sudo apt update && apt install git-core``
+2.  Gennerate ssh key ``ssh-keygen`` (hit _enter_ twice) and add the generated key to your deployment key list on your repository server ``cat .ssh/id_rsa.pub``
+3.  Configure _git_
+    -   ``git config --global user.name "Coffee"``
+    -   ``git config --global user.email sammy@example.com``
+4.  ``git clone YOUR-REPO.git ~/flows``
