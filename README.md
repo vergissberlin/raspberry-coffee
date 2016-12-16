@@ -70,3 +70,19 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
     -   ``git config --global user.name "Coffee"``
     -   ``git config --global user.email sammy@example.com``
 4.  ``git clone YOUR-REPO.git ~/flows``
+
+### WiFi wpa2 enterprise
+
+````
+# cat /etc/wpa_supplicant.conf
+network={
+  ssid="NETWORK"
+  scan_ssid=1
+  key_mgmt=WPA-EAP
+  identity="USERNAME"
+  password="PASSWORD"
+  eap=PEAP
+  phase1="peaplabel=0"
+  phase2="auth=MSCHAPV2"
+}
+````
