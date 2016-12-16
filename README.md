@@ -30,20 +30,17 @@ npm i node-red-node-pibrella node-red-node-xmpp node-red-node-feedparser
 ### Wifi
 
 1.  Configure the Wifi connection ``sudo nano /etc/wpa_supplicant/wpa_supplicant.conf``
-
 2.  Edit _wpa_supplicant.conf_
+    ```
+    country=GB
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
 
-```
-country=GB
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-network={
-    ssid="xxx"
-    psk="xxx"
-}
-```
-
+    network={
+        ssid="xxx"
+        psk="xxx"
+    }
+    ```
 3.  Restart adapter ``sudo ifdown wlan0 && ifup wlan0``
 4.  Check IP address ``ifconfig wlan0`` it should be look like this
 
