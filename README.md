@@ -73,16 +73,20 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 
 ### WiFi wpa2 enterprise
 
-````
-# cat /etc/wpa_supplicant.conf
-network={
-  ssid="NETWORK"
-  scan_ssid=1
-  key_mgmt=WPA-EAP
-  identity="USERNAME"
-  password="PASSWORD"
-  eap=PEAP
-  phase1="peaplabel=0"
-  phase2="auth=MSCHAPV2"
-}
-````
+1.  Generate configuration file ``/etc/wpa_supplicant.WPA2E.conf``
+    ````
+    network={
+      ssid="NETWORK"
+      scan_ssid=1
+      key_mgmt=WPA-EAP
+      identity="USERNAME"
+      password="PASSWORD"
+      eap=PEAP
+      phase1="peaplabel=0"
+      phase2="auth=MSCHAPV2"
+    }
+    ````
+2.  Use configuration ``sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.WPA2E.conf -d``
+3.  Check ``sudo dhclient -v wlan0`` dhcp reactions.
+4.  Check your IP ``ifconfig wlan0``
+5.  Test internet connection ``ping -c 3 github.com``
