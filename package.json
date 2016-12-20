@@ -1,0 +1,14 @@
+{
+  "name": "raspberry-coffee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "bash deps.sh",
+    "start": "sh start.sh"
+  },
+  "author": "André Lademann <vergissberlin@googlemail.com>",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
