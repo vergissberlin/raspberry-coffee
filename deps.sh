@@ -1,19 +1,15 @@
- #!/bin/bash
+#!/bin/bash
 set -o errexit
-apt-get update && apt-get install git-core python-rpi.gpio
+apt-get update && apt-get install git-core python-rpi.gpio nodered
 npm install -g npm@2.x
 npm cache clean -f
 npm install -g n
 n stable
 hash -r
-npm i -g -unsafe-perm node-red
+# npm i -g -unsafe-perm node-red
 mkdir -p ~/.node-red
 cd /usr/src/app/node-red/
 npm i node-red-node-pibrella node-red-node-feedparser
-
-#git config --global push.default matching
-#git config --global user.name $GIT_NAME
-#git config --global user.email $GIT_EMAIL
 
 # Coffee counter
 #
