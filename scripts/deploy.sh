@@ -9,15 +9,15 @@
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # 1. Update repository
-cd /app/flows &&\
+cd /data/rasberry-coffee &&\
 git checkout master &&\
 git pull &&\
 
 # 2. Copy flow file
-cat /app/.node-red/flows_coffee.json > /app/flows/config/flows_coffee.json &&\
+cat /usr/src/app/node-red/flows.json > /data/rasberry-coffee/node-red/flows.json &&\
 
 # 3. Add and commit changes
-git add config/flows_coffee.json &&\
+git add node-red/flows.json &&\
 git commit -am "Deploy new flow from Raspberry PI" >> /data/deploy.log &&\
 
 # 4. Push and log

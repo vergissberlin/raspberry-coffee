@@ -13,4 +13,4 @@ cp -p /data/id_rsa.pub ~/.ssh/id_rsa.pub
 cp -p /data/id_rsa ~/.ssh/id_rsa
 
 # Start NodeRED
-node-red-pi --max-old-space-size=128 --userDir /app/flows -v
+node-red-pi --max-old-space-size=128 --userDir /usr/src/app/node-red -v

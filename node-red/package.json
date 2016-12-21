@@ -1,6 +1,7 @@
 {
-  "name": "my-node-red",
+  "name": "raspberry-coffee",
   "version": "0.0.1",
+  "description": "Monitor the level of the waste bin",
   "dependencies": {
   },
   "engines": {
