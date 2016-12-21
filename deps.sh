@@ -11,7 +11,7 @@ set -o errexit
 
 # Install dependencies
 apt-get update
-apt-get install git mc -y
+apt-get install git mc
 
 # Configure git
 git config --global push.default matching
@@ -25,8 +25,13 @@ npm install -g n
 n stable
 hash -r
 
+# Check node version
+node -v
+npm -v
+
 # Install NodeRED
-npm i -g -unsafe-perm node-red
+# npm i -g -unsafe-perm node-red
+npm i -g node-red
 
 # Install additional nodes
 cd ~/.node-red

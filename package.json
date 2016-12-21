@@ -1,7 +1,7 @@
 {
   "name": "raspberry-coffee",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Monitor the level of the waste bin",
   "main": "index.js",
   "scripts": {
     "preinstall": "bash deps.sh",
