@@ -9,9 +9,9 @@ set -o errexit
 # @package    deployment
 # @author     André Lademann <vergissberlin@googlemail.com>
 
-# Install NodeRED
+# Install dependencies
 apt-get update
-apt-get install git mc nodered
+apt-get install git mc -y
 
 # Configure git
 git config --global push.default matching
@@ -24,14 +24,10 @@ npm cache clean -f
 npm install -g n
 n stable
 hash -r
-cd ~/.node-red
-npm i node-red-node-pibrella node-red-node-xmpp node-red-node-feedparser
+
+# Install NodeRED
 npm i -g -unsafe-perm node-red
 
-
 # Install additional nodes
-sudo apt-get install npm
-sudo npm install -g npm@2.x
-hash -r
 cd ~/.node-red
 npm i node-red-node-pibrella node-red-node-xmpp node-red-node-feedparser
