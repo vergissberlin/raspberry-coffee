@@ -9,18 +9,15 @@
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # 1. Update repository
-cd /app/flows &&\
-git checkout master &&\
+cd /data/raspberry-coffee &&\
+git checkout docker &&\
 git pull &&\
 
-
 # 2. Create backup
-cat /app/.node-red/flows_coffee.json > /app/.node-red/flows_backup.json &&\
+cat /usr/src/app/node-red/flows.json > /usr/src/app/node-red/flows_backup.json &&\
 
 # 3. Copy flow file
-cat /app/flows/config/flows_coffee.json > /app/.node-red/flows_coffee.json &&\
+cat /data/raspberry-coffee/node-red/flows.json > /usr/src/app/node-red/flows.json &&\
 
-# 4. Restart node-red
-sudo service nodered restart &&\
-
-exit 0;
+# 4. Restart container
+init 6
