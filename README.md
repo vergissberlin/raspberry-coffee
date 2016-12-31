@@ -76,6 +76,11 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
     -   ``git config --global user.email sammy@example.com``
 4.  ``git clone YOUR-REPO.git ~/flows``
 
+### Synching with resin.io
+
+1.  Install dependencies ``sudo npm i resin-cli js-yaml -g``
+2.  Start sync task ``resin sync --source . --destination /usr/src/app``
+
 ### WiFi wpa2 enterprise
 
 1.  Generate configuration file ``/etc/wpa_supplicant.WPA2E.conf``

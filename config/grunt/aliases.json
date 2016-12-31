@@ -1,0 +1,11 @@
+{
+	"default": [
+		"availabletasks"
+	],
+	"dev": [
+		"exec:sync"
+	],
+	"prod": [
+		"exec:deploy"
+	]
+}
