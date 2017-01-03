@@ -1,6 +1,8 @@
 # raspberry-coffee
 
-Holds flows for raspberry coffee waste counter with NodeRED.
+>  Holds flows for raspberry coffee waste counter with NodeRED.
+
+[![NSP Status](https://nodesecurity.io/orgs/programmerq/projects/adb455c0-39c6-45b8-ad2c-8831d66dc366/badge)](https://nodesecurity.io/orgs/programmerq/projects/adb455c0-39c6-45b8-ad2c-8831d66dc366)
 
 ## Installation
 
