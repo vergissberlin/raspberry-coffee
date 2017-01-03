@@ -10,7 +10,7 @@ set -o errexit
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # Install dependencies
-apt-get update && apt-get install git-core python-rpi.gpio nodered
+apt-get update && apt-get install git-core python-rpi.gpio nodered firmware-ralink
 
 # Update node
 npm install -g npm@2.x
