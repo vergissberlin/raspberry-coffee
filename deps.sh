@@ -11,7 +11,7 @@ set -o errexit
 
 # Install dependencies
 apt-get update &&\
-apt-get install git-core python-rpi.gpio nodered firmware-ralink sox libsox-fmt-all festival festival-doc festival-freebsoft-utils 
+apt-get install git-core python-rpi.gpio nodered iwlist wireless-tools firmware-ralink sox libsox-fmt-all festival festival-doc festival-freebsoft-utils
 
 # Update node
 npm install -g npm@2.x
@@ -20,6 +20,9 @@ npm install -g n
 n stable
 hash -r
 
+# Configure node
+npm config set unsafe-perm true -g --unsafe-perm
+
 # Install additional nodes
 cd /usr/src/app/node-red/
-npm i node-red-node-pibrella node-red-node-feedparser node-red-node-xmpp node-red-contrib-say node-red-contrib-play
+npm i node-red-node-pibrella node-red-contrib-resinio node-red-node-feedparser node-red-node-xmpp node-red-contrib-say node-red-contrib-play
