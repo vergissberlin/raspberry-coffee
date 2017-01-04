@@ -45,11 +45,11 @@ module.exports = {
     // Theme
     editorTheme: {
        page: {
-           title: "Coffee Node-RED",
+           title: "raspberry-coffee",
            favicon: "/usr/src/app/assets/favicon.png"
        },
        header: {
-           title: "Coffee Node-RED",
+           title: "raspberry-coffee",
            image: "/usr/src/app/assets/favicon.png", // or null to remove image
            url: "https://github.com/vergissberlin/raspberry-coffee"
        },
