@@ -1,5 +1,5 @@
 module.exports = {
-    uiPort: 80,
+    uiPort: process.env.PORT || 80 ,
 
     // Retry time in milliseconds for MQTT connections
     mqttReconnectTime: 15000,
@@ -13,8 +13,68 @@ module.exports = {
     // The file containing the flows. If not set, it defaults to flows_<hostname>.json
     flowFile: 'flows.json',
 
+    // To enabled pretty-printing of the flow within the flow file, set the following
+    //  property to true:
+    flowFilePretty: true,
 
-    functionGlobalContext: {
-        os:require('os'),
+    // Securing Node-RED
+    // -----------------
+    // To password protect the Node-RED editor and admin API, the following
+    // property can be used. See http://nodered.org/docs/security.html for details.
+    adminAuth: {
+        type: "credentials",
+        users: [{
+            username: process.env.USERNAME,
+            password: process.env.PASSWORD,
+            permissions: "*"
+        }],
+        default: {
+            permissions: "read"
+        }
     },
+
+    // Global context
+    functionGlobalContext: {
+        process: process,
+        os: require('os'),
+        // octalbonescript:require('octalbonescript'),
+        // jfive:require("johnny-five"),
+        // j5board:require("johnny-five").Board({repl:false})
+    },
+
+    // Theme
+    editorTheme: {
+       page: {
+           title: "Coffee Node-RED",
+           favicon: "/usr/src/app/assets/favicon.png"
+       },
+       header: {
+           title: "Coffee Node-RED",
+           image: "/usr/src/app/assets/favicon.png", // or null to remove image
+           url: "https://github.com/vergissberlin/raspberry-coffee"
+       },
+       login: {
+           image: "/usr/src/app/assets/favicon.png" // a 256x256 image
+       }
+   },
+
+   // Logging
+   // Configure the logging output
+   logging: {
+       // Only console logging is currently supported
+       console: {
+           // Level of logging to be recorded. Options are:
+           // fatal - only those errors which make the application unusable should be recorded
+           // error - record errors which are deemed fatal for a particular request + fatal errors
+           // warn - record problems which are non fatal + errors + fatal errors
+           // info - record information about the general running of the application + warn + error + fatal errors
+           // debug - record information which is more verbose than info + info + warn + error + fatal errors
+           // trace - record very detailed logging + debug + info + warn + error + fatal errors
+           level: "info",
+           // Whether or not to include metric events in the log output
+           metrics: false,
+           // Whether or not to include audit events in the log output
+           audit: false
+       }
+   }
 }
