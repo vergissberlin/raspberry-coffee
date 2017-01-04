@@ -11,7 +11,7 @@ set -o errexit
 
 # Install dependencies
 apt-get update &&\
-apt-get install git-core python-rpi.gpio nodered firmware-ralink linux-firmware-ralink linux-firmware-ath9k linux-firmware-rtl8192cu
+apt-get install git-core python-rpi.gpio nodered firmware-ralink sox libsox-fmt-all festival festival-doc festival-freebsoft-utils 
 
 # Update node
 npm install -g npm@2.x
@@ -22,4 +22,4 @@ hash -r
 
 # Install additional nodes
 cd /usr/src/app/node-red/
-npm i node-red-node-pibrella node-red-node-feedparser node-red-node-xmpp
+npm i node-red-node-pibrella node-red-node-feedparser node-red-node-xmpp node-red-contrib-say node-red-contrib-play
