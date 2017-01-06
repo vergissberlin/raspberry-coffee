@@ -43,3 +43,6 @@ npm i \
     node-red-contrib-say \
     node-red-contrib-play \
     node-red-contrib-debounce
+
+# Install process manager
+npm install pm2 -g --no-optional
