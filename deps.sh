@@ -42,7 +42,8 @@ npm i \
     node-red-node-xmpp \
     node-red-contrib-say \
     node-red-contrib-play \
-    node-red-contrib-debounce
+    node-red-contrib-debounce \
+    node-red-contrib-keymetrics
 
 # Install process manager
-npm install pm2 -g --no-optional
+npm i pm2 -g --no-optional
