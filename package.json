@@ -1,7 +1,7 @@
 {
   "name": "raspberry-coffee",
   "version": "0.0.1",
-  "description": "Coffee coffee garbage can overflow alarm",
+  "description": "Waste coffee bin overflow alarm",
   "author": "André Lademann <vergissberlin@googlemail.com>",
   "license": "MIT",
   "repository": "git@github.com:vergissberlin/raspberry-coffee.git",
