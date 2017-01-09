@@ -3,7 +3,7 @@ FROM resin/%%RESIN_MACHINE_NAME%%-node
 RUN mkdir -p /usr/src/app && ln -s /usr/src/app /app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
-RUN /app/deps.sh
+RUN /usr/src/app/deps.sh
 ENV INITSYSTEM on
 
-CMD [ "npm", "start" ]
+CMD [ "sh", "start.sh" ]
