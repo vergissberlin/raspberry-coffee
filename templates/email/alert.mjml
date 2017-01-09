@@ -1,0 +1,22 @@
+<mjml>
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-column>
+
+          <mj-image width="100" src="favicon.png"></mj-image>
+          <mj-divider border-color="#F45E43"></mj-divider>
+          <mj-text font-size="20px" color="#F45E43" font-family="helvetica">Hello Worldasas</mj-text>
+
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-button font-family="Helvetica" background-color="#f45e43" color="white">
+            Don't click me!
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>
