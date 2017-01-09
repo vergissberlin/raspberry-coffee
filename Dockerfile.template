@@ -1,9 +1,10 @@
-FROM resin/%%RESIN_MACHINE_NAME%%-node
+FROM resin/%%RESIN_MACHINE_NAME%%-node:0.10.22
 
+ENV NODE_ENV production
 RUN mkdir -p /usr/src/app && ln -s /usr/src/app /app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
-RUN /usr/src/app/deps.sh
+RUN DEBIAN_FRONTEND=noninteractive JOBS=MAX npm install --unsafe-perm
 ENV INITSYSTEM on
 
-CMD [ "sh", "start.sh" ]
+CMD [ "npm", "start" ]

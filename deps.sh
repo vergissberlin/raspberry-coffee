@@ -24,7 +24,7 @@ apt-get install \
     festival-freebsoft-utils
 
 # Update node
-npm install -g npm@2.x
+npm install -g npm
 npm cache clean -f
 npm install -g n
 n stable
