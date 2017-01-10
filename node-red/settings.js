@@ -46,15 +46,16 @@ module.exports = {
     editorTheme: {
        page: {
            title: "coffee bin",
-           favicon: "/usr/src/app/assets/logo/coffee-bin-500.png"
+           favicon: "/usr/src/app/assets/logo/coffee-bin.png",
+           css: "/usr/src/app/assets/css/node-red.css"
        },
        header: {
            title: "coffee bin",
-           image: "/usr/src/app/assets/logo/coffee-bin-yellow.png", // or null to remove image
+           image: "/usr/src/app/assets/logo/coffee-bin-text-white.png", // or null to remove image
            url: "https://github.com/vergissberlin/raspberry-coffee"
        },
        login: {
-           image: "/usr/src/app/assets/logo/coffee-bin-500.png" // a 256x256 image
+           image: "/usr/src/app/assets/logo/coffee-bin-256.png" // a 256x256 image
        }
    },
 
