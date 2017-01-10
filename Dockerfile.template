@@ -1,12 +1,32 @@
-FROM resin/%%RESIN_MACHINE_NAME%%-node:0.10.22
+# raspberry-coffee
+#
+# LICENSE:    MIT
+#
+# @project    RaspberryCoffee
+# @package    run
+# @author     André Lademann <vergissberlin@googlemail.com>
+# @license    http://opensource.org/licenses/MIT
 
-ENV NODE_ENV production
-ENV NODE_OPTIONS --max-old-space-size=128
-ENV NODE_ARGS --node-args="-u /usr/src/app/node-red"
+FROM resin/%%RESIN_MACHINE_NAME%%-node:0.10.22
+MAINTAINER André Lademann <vergissberlin@googlemail.com>
+
+
+# ---- Environment ----------------------------------------
+ENV NODE_ENV="production" \
+	NODE_OPTIONS="--max-old-space-size=128" \
+  DEBIAN_FRONTEND="noninteractive" \
+  INITSYSTEM="on" \
+  JOBS="MAX"
+
+# ---- COPY SOURCES ---------------------------------------
 RUN mkdir -p /usr/src/app && ln -s /usr/src/app /app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
-RUN DEBIAN_FRONTEND=noninteractive JOBS=MAX npm install --unsafe-perm
-ENV INITSYSTEM on
 
+# ---- Dependencies ---------------------------------------
+RUN bash build/deps-apt.sh
+RUN bash build/deps-node-update.sh
+RUN npm install --unsafe-perm
+
+# ---- Start ----------------------------------------------
 CMD [ "npm", "start" ]

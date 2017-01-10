@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "git@github.com:vergissberlin/raspberry-coffee.git",
   "scripts": {
-    "preinstall": "bash deps.sh",
+    "preinstall": "bash build/deps-node-modules.sh",
     "start": "sh start.sh"
   },
   "directories": {
