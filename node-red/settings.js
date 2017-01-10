@@ -50,7 +50,7 @@ module.exports = {
            css: "/usr/src/app/assets/css/node-red.css"
        },
        header: {
-           title: "coffee bin",
+           title: "",
            image: "/usr/src/app/assets/logo/coffee-bin-text-white.png", // or null to remove image
            url: "https://github.com/vergissberlin/raspberry-coffee"
        },
