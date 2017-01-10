@@ -46,3 +46,4 @@ npm i \
 
 # Install process manager
 npm i pm2 -g --no-optional
+pm2 install pm2-server-monit

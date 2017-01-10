@@ -24,10 +24,10 @@ cp -n /data/flows_cred.json /usr/src/app/node-red/flows_cred.json
 pm2 link $SECRET_KEY $PUBLIC_KEY $RESIN_DEVICE_UUID
 
 # Start pm2 process to run NodeRED forever
-pm2 start /usr/bin/node-red --node-args="--max-old-space-size 128  --userDir /usr/src/app/node-red" -- -v
+pm2 start /usr/bin/node-red-pi -- -v -u /usr/src/app/node-red
 
 # Print info
-pm2 info node-red
+pm2 info node-red-pi
 
 # Spit out some logs
 pm2 logs

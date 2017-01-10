@@ -1,6 +1,8 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-node:0.10.22
 
 ENV NODE_ENV production
+ENV NODE_OPTIONS --max-old-space-size=128
+ENV NODE_ARGS --node-args="-u /usr/src/app/node-red"
 RUN mkdir -p /usr/src/app && ln -s /usr/src/app /app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
