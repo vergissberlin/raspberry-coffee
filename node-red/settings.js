@@ -45,16 +45,16 @@ module.exports = {
     // Theme
     editorTheme: {
        page: {
-           title: "raspberry-coffee",
-           favicon: "/usr/src/app/assets/favicon.png"
+           title: "coffee bin",
+           favicon: "/usr/src/app/assets/logo/coffee-bin-500.png"
        },
        header: {
-           title: "raspberry-coffee",
-           image: "/usr/src/app/assets/favicon.png", // or null to remove image
+           title: "coffee bin",
+           image: "/usr/src/app/assets/logo/coffee-bin-yellow.png", // or null to remove image
            url: "https://github.com/vergissberlin/raspberry-coffee"
        },
        login: {
-           image: "/usr/src/app/assets/favicon.png" // a 256x256 image
+           image: "/usr/src/app/assets/logo/coffee-bin-500.png" // a 256x256 image
        }
    },
 
