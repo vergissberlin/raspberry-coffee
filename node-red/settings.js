@@ -55,7 +55,7 @@ module.exports = {
            url: "https://github.com/vergissberlin/raspberry-coffee"
        },
        login: {
-           image: "/usr/src/app/assets/logo/coffee-bin-256.png" // a 256x256 image
+           image: "/usr/src/app/assets/logo/coffee-bin.svg" // a 256x256 image
        }
    },
 
