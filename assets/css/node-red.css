@@ -1,3 +1,24 @@
 #header {
   background: rgba(0,0,100,0.9);
 }
+
+#logo span {
+  display: none;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    background: #683dc7;
+    border-bottom: 1px solid #5a4383;
+}
+
+#btn-deploy.disabled {
+    background: #312394;
+}
+
+#btn-deploy.disabled+#btn-deploy-options {
+    background: rgba(112, 112, 162, 0.47);
+}
+
+#btn-deploy.disabled+#btn-deploy-options:hover {
+    background: #9386d2;
+}
