@@ -53,3 +53,11 @@
     border-color: #683dc7;
     background: #683dc7;
 }
+
+span.logo {
+    line-height: 25px;
+}
+
+span.logo img {
+    height: 21px;
+}
