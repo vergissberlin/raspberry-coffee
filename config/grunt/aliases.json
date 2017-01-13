@@ -3,9 +3,13 @@
 		"availabletasks"
 	],
 	"dev": [
-		"exec:sync"
+		"scsslint",
+		"libsass",
+		"watch"
 	],
 	"prod": [
+		"libsass",
+		"cssmin",
 		"exec:deploy"
 	]
 }

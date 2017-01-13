@@ -16,7 +16,7 @@
 module.exports = {
 
 	login: 'resin login --web',
-	sync: 'resin sync --source . --destination /usr/src/app',
+	sync: 'resin sync --source . --destination /usr/src/app/',
   deploy: 'git push resin master'
 
 };

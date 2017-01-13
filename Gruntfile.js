@@ -24,8 +24,10 @@ module.exports = function (grunt) {
 		jitGrunt: {
 			staticMappings: {
 				availabletasks: 'grunt-available-tasks',
-				exec: 'grunt-exec',
-				mjml: 'grunt-mjml'
+				exec: 					'grunt-exec',
+				mjml: 					'grunt-mjml',
+				libsass:           'grunt-libsass',
+				scsslint:       'grunt-scss-lint'
 			}
 		},
 		data:     {

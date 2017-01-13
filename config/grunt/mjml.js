@@ -19,9 +19,9 @@ module.exports = {
   prod: {
     files: [{
         expand: true,
-        cwd: 'templates/email', // Src matches are relative to this path.
+        cwd: '<%= package.directories.private.views %>', // Src matches are relative to this path.
         src: ['**/*.mjml'], // Actual pattern(s) to match.
-        dest: 'assets/templates/email/',   // Destination path prefix.
+        dest: '<%= package.directories.public.views %>',   // Destination path prefix.
         ext: '.html',   // Dest filepaths will have this extension.
         extDot: 'first'   // Extensions in filenames begin after the first dot
       }]
