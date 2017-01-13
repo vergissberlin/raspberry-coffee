@@ -10,10 +10,6 @@
     background: rgba(35, 31, 45, 0.98);
 }
 
-.deploy-button-group.open #btn-deploy-options {
-    background: #231f2d !important;
-}
-
 #header .button {
     border-left: 2px solid #3f2c6d;
     border-right: 2px solid #3f2c6d;
@@ -32,11 +28,6 @@
     background: #231f2d;
 }
 
-.ui-dialog .ui-dialog-titlebar {
-    background: #683dc7;
-    border-bottom: 1px solid #5a4383;
-}
-
 #btn-deploy.disabled {
     background: #312394;
 }
@@ -47,6 +38,15 @@
 
 #btn-deploy.disabled+#btn-deploy-options:hover {
     background: #9386d2;
+}
+
+.deploy-button-group.open #btn-deploy-options {
+    background: #231f2d !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    background: #683dc7;
+    border-bottom: 1px solid #5a4383;
 }
 
 .editor-tray-toolbar button.primary {
@@ -60,4 +60,8 @@ span.logo {
 
 span.logo img {
     height: 21px;
+}
+
+.notification-error {
+    border-color: rgb(255, 10, 10);
 }
