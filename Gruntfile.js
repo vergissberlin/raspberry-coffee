@@ -26,7 +26,6 @@ module.exports = function (grunt) {
 				availabletasks: 'grunt-available-tasks',
 				exec: 					'grunt-exec',
 				mjml: 					'grunt-mjml',
-				libsass:           'grunt-libsass',
 				scsslint:       'grunt-scss-lint'
 			}
 		},
@@ -34,5 +33,4 @@ module.exports = function (grunt) {
 			path: path
 		}
 	});
-
 };

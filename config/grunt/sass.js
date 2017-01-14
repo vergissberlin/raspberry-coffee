@@ -14,11 +14,11 @@
 'use strict';
 
 module.exports = {
-		options: {
-    	sourcemap: true
-    },
-		dev {
-			src: '<%= package.directories.public.css %>/style.css'
-			dest: '<%= package.directories.private.scss %>/style.scss',
+
+		dist: {
+			files: {
+				'<%= package.directories.public.css %>/style.css': '<%= package.directories.private.scss %>/style.scss'
+			}
 		}
+
 };

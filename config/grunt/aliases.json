@@ -4,11 +4,11 @@
 	],
 	"dev": [
 		"scsslint",
-		"libsass",
+		"sass",
 		"watch"
 	],
 	"prod": [
-		"libsass",
+		"sass",
 		"cssmin",
 		"exec:deploy"
 	]
