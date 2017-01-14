@@ -23,7 +23,7 @@ module.exports = {
    target: {
 		files: [{
        expand: true,
-       cwd: '<%= package.directories.private.scss %>',
+       cwd: '<%= package.directories.public.css %>',
        src: ['*.css', '!*.min.css'],
        dest: '<%= package.directories.public.css %>',
        ext: '.min.css'
