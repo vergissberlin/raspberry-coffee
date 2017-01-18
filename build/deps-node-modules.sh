@@ -10,10 +10,10 @@ set -o errexit
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # Directories
-mkdir -p /data/node-red/nodes
+mkdir -p /data/node-red-nodes
 
 # Install additional nodes
-cd /data/node-red/nodes &&\
+cd /data/node-red-nodes &&\
 npm i \
     node-red-node-pibrella \
     node-red-contrib-resinio \

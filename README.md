@@ -104,7 +104,7 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 
 ## Directories
 
-1.  Nodes       ``/data/node-red/nodes/``
+1.  Nodes       ``/data/node-red-nodes/``
 2.  Flows       ``/data/node-red/``
 3.  Backups     ``/data/backup/``
 4.  Scripts     ``/app/app/scripts/``
