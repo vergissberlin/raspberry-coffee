@@ -53,7 +53,6 @@ npm i node-red-node-pibrella node-red-node-xmpp node-red-node-feedparser
     ```
 3.  Restart adapter ``sudo ifdown wlan0 && ifup wlan0``
 4.  Check IP address ``ifconfig wlan0`` it should be look like this
-
 ```
 wlan0     Link encap:Ethernet  HWaddr 14:cc:20:22:ee:21
           inet addr:192.168.178.32  Bcast:192.168.178.255  Mask:255.255.255.0
@@ -103,7 +102,7 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 4.  Check your IP ``ifconfig wlan0``
 5.  Test internet connection ``ping -c 3 github.com``
 
-### Directories
+## Directories
 
 1.  Nodes       ``/data/node-red/nodes/``
 2.  Flows       ``/data/node-red/``

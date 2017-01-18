@@ -2,8 +2,13 @@ uuid: eb8c270b6948d744586d29437b0f38fae224007bc38960f15ce28f540c918a
 destination: /usr/src/app
 port: 22
 ignore:
+  - .editorconfig
   - .git
   - .gitignore
-  - config/
+  - .idea
+  - .scss-lint.yml
+  - /config/
+  - /node_modules/
+  - /private/
+  - /tests/
   - Gruntfile.js
-  - node_modules/
