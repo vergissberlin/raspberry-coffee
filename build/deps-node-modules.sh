@@ -11,17 +11,18 @@ set -o errexit
 
 # Directories
 mkdir -p /data/node-red-nodes
+cp -n /app/package.json /data/node-red-nodes/
 
 # Install additional nodes
 cd /data/node-red-nodes &&\
 npm i \
-    node-red-node-pibrella \
-    node-red-contrib-resinio \
-    node-red-node-feedparser \
-    node-red-node-xmpp \
-    node-red-contrib-say \
+    node-red-contrib-debounce \
     node-red-contrib-play \
-    node-red-contrib-debounce
+    node-red-contrib-resinio \
+    node-red-contrib-say \
+    node-red-node-feedparser \
+    node-red-node-pibrella \
+    node-red-node-xmpp
 
 # Install process manager
 npm i pm2 -g --no-optional
