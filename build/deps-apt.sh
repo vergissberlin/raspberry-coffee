@@ -9,6 +9,10 @@ set -o errexit
 # @package    deployment
 # @author     André Lademann <vergissberlin@googlemail.com>
 
+# Directories
+mkdir -p ~/.ssh
+mkdir -p /data/ssh
+
 # Install dependencies
 apt-get update &&\
 apt-get install \

@@ -9,6 +9,9 @@ set -o errexit
 # @package    deployment
 # @author     André Lademann <vergissberlin@googlemail.com>
 
+# Directories
+mkdir -p /data/node-red/nodes
+
 # Install additional nodes
 cd /data/node-red/nodes &&\
 npm i \
