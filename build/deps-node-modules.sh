@@ -10,7 +10,7 @@ set -o errexit
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # Install additional nodes
-cd /usr/src/app/node-red/
+cd /usr/src/app/app/node-red/
 npm i \
     node-red-node-pibrella \
     node-red-contrib-resinio \
