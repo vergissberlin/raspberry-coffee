@@ -9,6 +9,7 @@
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # 1. Update repository
+cd /data &&\
 cd /data/raspberry-coffee &&\
 git checkout docker &&\
 git pull &&\
