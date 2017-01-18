@@ -14,10 +14,10 @@ git checkout docker &&\
 git pull &&\
 
 # 2. Create backup
-cat /usr/src/app/node-red/flows.json > /usr/src/app/node-red/flows_backup.json &&\
+cat /data/app/node-red/flows.json > /data/backup/node-red/flows_backup.json &&\
 
 # 3. Copy flow file
-cat /data/raspberry-coffee/node-red/flows.json > /usr/src/app/node-red/flows.json &&\
+cat /data/raspberry-coffee/app/node-red/flows.json > /data/node-red/flows.json &&\
 
 # 4. Restart container
 init 6

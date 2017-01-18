@@ -9,19 +9,16 @@
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # 1. Update repository
-cd /data &&\
-git checkout docker &&\
 cd /data/raspberry-coffee &&\
+git checkout docker &&\
 git pull &&\
 
 # 2. Copy flow file
-cat /usr/src/app/node-red/flows.json > node-red/flows.json &&\
+cat /data/node-red/flows.json > app/node-red/flows.json &&\
 
 # 3. Add and commit changes
-git add node-red/flows.json &&\
-git commit -am "Deploy new flow from Raspberry PI" >> /data/deploy.log &&\
+git add app/node-red/flows.json &&\
+git commit -am "Deploy new coffee-bin flow from Raspberry PI" >> /data/deploy.log &&\
 
 # 4. Push and log
-git push -u >> /data/deploy.log &&\
-
-exit 0;
+git push -u >> /data/log/deploy.log &&\

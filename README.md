@@ -102,3 +102,12 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 3.  Check ``sudo dhclient -v wlan0`` dhcp reactions.
 4.  Check your IP ``ifconfig wlan0``
 5.  Test internet connection ``ping -c 3 github.com``
+
+### Directories
+
+1.  Nodes       ``/data/node-red/nodes/``
+2.  Flows       ``/data/node-red/``
+3.  Backups     ``/data/backup/``
+4.  Scripts     ``/app/app/scripts/``
+5.  SSH         ``/data/ssh``
+6.  Repository  ``/data/raspberry-coffee``

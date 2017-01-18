@@ -13,12 +13,13 @@ set -o errexit
 apt-get update &&\
 apt-get install \
     git-core \
-    python-rpi.gpio \
-    nodered \
-    wireless-tools \
     firmware-ralink \
-    sox \
-    libsox-fmt-all \
     festival \
     festival-doc \
-    festival-freebsoft-utils
+    festival-freebsoft-utils \
+    libsox-fmt-all \
+    mc \
+    nodered \
+    python-rpi.gpio \
+    sox \
+    wireless-tools

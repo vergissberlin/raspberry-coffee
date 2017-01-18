@@ -9,7 +9,7 @@
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # 1. Backup settings
-cp -f /usr/src/app/node-red/flows_cred.json /data/flows_cred.json
+cp -f /data/node-red/flows_cred.json /data/backup/node-red/flows_cred.json
 
 # 2. Backup flow
-cp -f /usr/src/app/node-red/flows.json /data/flows.json
+cp -f /data/node-red/flows.json /data/backup/node-red/flows.json
