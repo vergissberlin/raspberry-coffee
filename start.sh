@@ -15,7 +15,6 @@ export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
 mkdir -p ~/.ssh
 mkdir -p /data/backup/node-red
 mkdir -p /data/log
-mkdir -p /data/node-red/nodes
 mkdir -p /data/ssh
 
 # Git deployment

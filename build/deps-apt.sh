@@ -11,7 +11,6 @@ set -o errexit
 
 # Directories
 mkdir -p ~/.ssh
-mkdir -p /data/ssh
 
 # Install dependencies
 apt-get update &&\

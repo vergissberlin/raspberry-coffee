@@ -10,11 +10,11 @@ set -o errexit
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # Directories
-mkdir -p /data/node-red-nodes
-cp -n /app/package.json /data/node-red-nodes/
+mkdir -p /usr/src/app/app/node-red-nodes
+cp -n /usr/src/app/package.json /usr/src/app/node-red-nodes/
 
 # Install additional nodes
-cd /data/node-red-nodes &&\
+cd /usr/src/app/node-red-nodes &&\
 npm i \
     node-red-contrib-debounce \
     node-red-contrib-play \
