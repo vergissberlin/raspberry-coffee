@@ -10,7 +10,7 @@ set -o errexit
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # Directories
-mkdir -p /usr/src/app/app/node-red-nodes
+mkdir -p /usr/src/app/node-red-nodes
 cp -n /usr/src/app/package.json /usr/src/app/node-red-nodes/
 
 # Install additional nodes
