@@ -30,5 +30,6 @@ pm2 link $SECRET_KEY $PUBLIC_KEY $RESIN_DEVICE_UUID
 
 # Start pm2 process to run NodeRED forever
 pm2 start /usr/bin/node-red -- -v -s /usr/src/app/app/node-red/settings.js
+pm2 monit
 pm2 info node-red
-pm2 logs
+pm2 logs node-red --lines 1000

@@ -24,5 +24,6 @@ apt-get install \
     mc \
     nodered \
     python-rpi.gpio \
+    sense-hat \
     sox \
     wireless-tools
