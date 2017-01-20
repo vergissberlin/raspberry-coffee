@@ -18,8 +18,8 @@ cat /dev/zero | ssh-keygen -q -N "" &&\
 cat /root/.ssh/id_rsa.pub &&\
 
 # 3. Store ssh key on persitent mount
-cp -f /root/.ssh/id_rsa /data/ssh/id_rsa &&\
-cp -f /root/.ssh/id_rsa.pub /data/ssh/id_rsa.pub &&\
+cp -u /root/.ssh/id_rsa /data/ssh/id_rsa &&\
+cp -u /root/.ssh/id_rsa.pub /data/ssh/id_rsa.pub &&\
 
 # 4. Clone repository
 cd /data &&\
