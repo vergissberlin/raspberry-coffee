@@ -1,4 +1,4 @@
-# raspberry-coffee
+# coffee-bin
 
 Holds flows for raspberry coffee waste counter with NodeRED.
 

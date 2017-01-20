@@ -23,7 +23,7 @@ cp -u /root/.ssh/id_rsa.pub /data/ssh/id_rsa.pub &&\
 
 # 4. Clone repository
 cd /data &&\
-git clone git@github.com:vergissberlin/raspberry-coffee.git &&\
-cd raspberry-coffee &&\
+git clone git@github.com:vergissberlin/coffee-bin.git &&\
+cd coffee-bin &&\
 git checkout master &&\
 git branch --set-upstream-to=origin/master

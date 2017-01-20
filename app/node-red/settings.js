@@ -87,7 +87,7 @@ module.exports = {
        header: {
            title: null,
            image: '/usr/src/app/public/images/logo/coffee-bin-text-bold-white.svg', // or null to remove image
-           url: 'https://github.com/vergissberlin/raspberry-coffee'
+           url: 'https://github.com/vergissberlin/coffee-bin'
        },
        login: {
            image: '/usr/src/app/public/images/logo/coffee-bin.svg' // a 256x256 image

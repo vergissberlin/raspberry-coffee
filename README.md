@@ -1,4 +1,4 @@
-# raspberry-coffee
+# coffee-bin
 
 >  Holds flows for raspberry coffee waste counter with NodeRED.
 
@@ -99,4 +99,4 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 3.  Backups     ``/data/backup/``
 4.  Scripts     ``/app/app/scripts/``
 5.  SSH         ``/data/ssh``
-6.  Repository  ``/data/raspberry-coffee``
+6.  Repository  ``/data/coffee-bin``
