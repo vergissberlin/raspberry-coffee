@@ -27,3 +27,6 @@ apt-get install \
     sox \
     vim \
     wireless-tools
+
+# Configure dependencies
+echo -e "\nsyntax on\nset background=dark\nset mouse=a\n" >> /etc/vim/vimrc
