@@ -21,7 +21,6 @@ npm i \
     node-red-contrib-resinio \
     node-red-contrib-say \
     node-red-node-feedparser \
-    node-red-node-pibrella \
     node-red-node-xmpp
 
 # Install process manager
