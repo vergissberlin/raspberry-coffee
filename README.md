@@ -32,8 +32,7 @@ npm i node-red-node-pibrella node-red-node-xmpp node-red-node-feedparser
 1.  Create an account on resin.io
 2.  Create an application on resin.io
 3.  Copy and add the respository path
-4.  Switch to _docker_ branch
-5.  Push it to resin.io ``git push resin docker:master``
+4.  Push it to resin.io ``git push resin master``
 
 ## Setup
 

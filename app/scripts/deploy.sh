@@ -10,7 +10,7 @@
 
 # 1. Update repository
 cd /data/raspberry-coffee &&\
-git checkout docker &&\
+git checkout master &&\
 git pull &&\
 
 # 2. Copy flow file

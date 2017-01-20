@@ -25,5 +25,5 @@ cp -u /root/.ssh/id_rsa.pub /data/ssh/id_rsa.pub &&\
 cd /data &&\
 git clone git@github.com:vergissberlin/raspberry-coffee.git &&\
 cd raspberry-coffee &&\
-git checkout docker &&\
-git branch --set-upstream-to=origin/docker
+git checkout master &&\
+git branch --set-upstream-to=origin/master
