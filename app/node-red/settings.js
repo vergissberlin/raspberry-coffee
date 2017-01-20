@@ -11,7 +11,7 @@ module.exports = {
 
     // Node-RED scans the `nodes` directory in the install directory to find nodes.
     // The following property can be used to specify an additional directory to scan.
-    nodesDir: '/usr/src/app/node-red-nodes/',
+    nodesDir: '/usr/src/app/node-red-nodes/node_modules/',
 
 
 
@@ -81,16 +81,16 @@ module.exports = {
     editorTheme: {
        page: {
            title: 'coffee bin',
-           favicon: '/usr/src/app/assets/logo/coffee-bin.png',
-           css: '/usr/src/app/assets/css/node-red.css'
+           favicon: '/usr/src/app/public/images/logo/coffee-bin.png',
+           css: '/usr/src/app/public/css/node-red.css'
        },
        header: {
            title: null,
-           image: '/usr/src/app/assets/logo/coffee-bin-text-bold-white.svg', // or null to remove image
+           image: '/usr/src/app/public/images/logo/coffee-bin-text-bold-white.svg', // or null to remove image
            url: 'https://github.com/vergissberlin/raspberry-coffee'
        },
        login: {
-           image: '/usr/src/app/assets/logo/coffee-bin.svg' // a 256x256 image
+           image: '/usr/src/app/public/images/logo/coffee-bin.svg' // a 256x256 image
        }
    },
 
