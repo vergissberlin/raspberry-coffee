@@ -25,4 +25,5 @@ apt-get install \
     nodered \
     python-rpi.gpio \
     sox \
+    vim \
     wireless-tools

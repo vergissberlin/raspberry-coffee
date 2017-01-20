@@ -14,7 +14,7 @@ git checkout docker &&\
 git pull &&\
 
 # 2. Copy flow file
-cat /data/node-red/flows.json > app/node-red/flows.json &&\
+cat /usr/src/app/app/node-red/flows.json > app/node-red/flows.json &&\
 
 # 3. Add and commit changes
 git add app/node-red/flows.json &&\
