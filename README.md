@@ -77,30 +77,21 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
     -   ``git config --global user.email sammy@example.com``
 4.  ``git clone YOUR-REPO.git ~/flows``
 
-### Synching with resin.io
+### resin.io
+#### Synching with resin.io
 
 1.  Install dependencies ``sudo npm i resin-cli js-yaml -g``
 2.  Start sync task ``resin sync --source . --destination /usr/src/app``
 
-### WiFi wpa2 enterprise
+#### Environment variables
 
-1.  Generate configuration file ``/etc/wpa_supplicant.WPA2E.conf``
-    ````
-    network={
-      ssid="NETWORK"
-      scan_ssid=1
-      key_mgmt=WPA-EAP
-      identity="USERNAME"
-      password="PASSWORD"
-      eap=PEAP
-      phase1="peaplabel=0"
-      phase2="auth=MSCHAPV2"
-    }
-    ````
-2.  Use configuration ``sudo wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.WPA2E.conf -d``
-3.  Check ``sudo dhclient -v wlan0`` dhcp reactions.
-4.  Check your IP ``ifconfig wlan0``
-5.  Test internet connection ``ping -c 3 github.com``
+1.   Authentification
+    - USERNAME
+    - PASSWORD
+2.   Deployment
+    - GIT_EMAIL
+    - GIT_NAME
+    - GIT_REPOSITORY
 
 ## Directories
 
