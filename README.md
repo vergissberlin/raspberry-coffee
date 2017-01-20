@@ -85,13 +85,13 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 
 #### Environment variables
 
-1.   Authentification
-    - USERNAME
-    - PASSWORD
-2.   Deployment
-    - GIT_EMAIL
-    - GIT_NAME
-    - GIT_REPOSITORY
+1.  Authentification
+    -   USERNAME
+    -   PASSWORD
+2.  Deployment
+    -   GIT_EMAIL
+    -   GIT_NAME
+    -   GIT_REPOSITORY
 
 ## Directories
 
