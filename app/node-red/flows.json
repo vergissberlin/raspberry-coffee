@@ -231,8 +231,8 @@
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 710,
-        "y": 240,
+        "x": 670,
+        "y": 280,
         "wires": []
     },
     {
@@ -245,7 +245,7 @@
         "useSpawn": "",
         "timer": "",
         "name": "",
-        "x": 400,
+        "x": 420,
         "y": 200,
         "wires": [
             [
@@ -342,8 +342,8 @@
         "name": "",
         "url": "/info",
         "method": "get",
-        "x": 160,
-        "y": 480,
+        "x": 180,
+        "y": 560,
         "wires": [
             [
                 "a835d5f9.b67238"
@@ -357,8 +357,8 @@
         "name": "Os Info",
         "func": "msg.payload = {\n    freemem: context.global.os.freemem(),\n    totalmem: context.global.os.totalmem(),\n    loadavg: context.global.os.loadavg(),\n    uptime: context.global.os.uptime()\n}\nreturn msg;",
         "outputs": 1,
-        "x": 357,
-        "y": 480,
+        "x": 377,
+        "y": 560,
         "wires": [
             [
                 "d9f25f82.33e8d"
@@ -370,8 +370,8 @@
         "type": "http response",
         "z": "8f52f3d0.cfa4",
         "name": "",
-        "x": 687,
-        "y": 480,
+        "x": 650,
+        "y": 560,
         "wires": []
     },
     {
@@ -384,7 +384,7 @@
         "payloadType": "date",
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "x": 170,
         "y": 280,
         "wires": [
@@ -429,7 +429,7 @@
         "crontab": "",
         "once": false,
         "x": 170,
-        "y": 360,
+        "y": 440,
         "wires": [
             [
                 "1fdb385b.e7d548"
@@ -446,8 +446,8 @@
         "useSpawn": "",
         "timer": "",
         "name": "",
-        "x": 400,
-        "y": 360,
+        "x": 420,
+        "y": 440,
         "wires": [
             [
                 "ce6bfdf6.64da2"
@@ -837,5 +837,130 @@
         "x": 475,
         "y": 420,
         "wires": []
+    },
+    {
+        "id": "9d8380df.d7a17",
+        "type": "inject",
+        "z": "8f52f3d0.cfa4",
+        "name": "recover",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "a5054760.cb8c48"
+            ]
+        ]
+    },
+    {
+        "id": "a5054760.cb8c48",
+        "type": "exec",
+        "z": "8f52f3d0.cfa4",
+        "command": "sh app/scripts/recover.sh",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "",
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "ce6bfdf6.64da2"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b07ad58e.a81a18",
+        "type": "restart",
+        "z": "8f52f3d0.cfa4",
+        "name": "restart container",
+        "x": 420,
+        "y": 700,
+        "wires": [
+            [
+                "e30770c0.0eb67"
+            ]
+        ]
+    },
+    {
+        "id": "ee527e26.4b8c1",
+        "type": "comment",
+        "z": "8f52f3d0.cfa4",
+        "name": "resin.io",
+        "info": "",
+        "x": 114,
+        "y": 626,
+        "wires": []
+    },
+    {
+        "id": "328033d3.d221fc",
+        "type": "inject",
+        "z": "8f52f3d0.cfa4",
+        "name": "restart",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 700,
+        "wires": [
+            [
+                "b07ad58e.a81a18"
+            ]
+        ]
+    },
+    {
+        "id": "e30770c0.0eb67",
+        "type": "debug",
+        "z": "8f52f3d0.cfa4",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 630,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3832330f.41324c",
+        "type": "reboot",
+        "z": "8f52f3d0.cfa4",
+        "name": "reboot device",
+        "x": 420,
+        "y": 760,
+        "wires": [
+            [
+                "e30770c0.0eb67"
+            ]
+        ]
+    },
+    {
+        "id": "50423209.c5b4dc",
+        "type": "inject",
+        "z": "8f52f3d0.cfa4",
+        "name": "reboot",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 760,
+        "wires": [
+            [
+                "3832330f.41324c"
+            ]
+        ]
     }
 ]
