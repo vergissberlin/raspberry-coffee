@@ -8,7 +8,7 @@
 # @license    http://opensource.org/licenses/MIT
 
 FROM resin/%%RESIN_MACHINE_NAME%%-node:0.10.22
-MAINTAINER André Lademann <vergissberlin@googlemail.com>
+LABEL maintainer "André Lademann <vergissberlin@googlemail.com>"
 
 
 # ---- Environment ----------------------------------------
