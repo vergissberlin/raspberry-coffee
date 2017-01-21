@@ -1,13 +1,13 @@
 {
   "name": "coffee-bin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Coffee bin overflow alarm",
   "author": "André Lademann <vergissberlin@googlemail.com>",
   "license": "MIT",
   "repository": "git@github.com:vergissberlin/coffee-bin.git",
   "scripts": {
-    "preinstall": "bash build/deps-node-modules.sh",
-    "start": "sh start.sh"
+    "preinstall": "bash build/build.sh",
+    "start": "sh app/app.sh"
   },
   "directories": {
     "app": {

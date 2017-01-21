@@ -30,4 +30,3 @@ apt-get install \
 
 # Configure dependencies
 echo -e "\nsyntax on\nset background=dark\nset mouse=a\n" >> /etc/vim/vimrc
-update-alternatives --set editor /usr/bin/vim.basic

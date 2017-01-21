@@ -10,13 +10,17 @@
 FROM resin/%%RESIN_MACHINE_NAME%%-node:0.10.22
 LABEL maintainer "André Lademann <vergissberlin@googlemail.com>"
 
-
 # ---- Environment ----------------------------------------
-ENV NODE_ENV="production" \
+ENV \
+	APP_NAME="coffee-bin" \
+	APP_SRC="/usr/src/app" \
+	DBUS_SYSTEM_BUS_ADDRESS="unix:path=/host/run/dbus/system_bus_socket" \
+	DEBIAN_FRONTEND="noninteractive" \
+	INITSYSTEM="on" \
+  JOBS="MAX" \
+	NODE_ENV="production" \
 	NODE_OPTIONS="--max-old-space-size=128" \
-  DEBIAN_FRONTEND="noninteractive" \
-  INITSYSTEM="on" \
-  JOBS="MAX"
+	SYSTEM_TIMEZONE="Europe/Berlin"
 
 # ---- COPY SOURCES ---------------------------------------
 RUN mkdir -p /usr/src/app && ln -s /usr/src/app /app
@@ -25,8 +29,7 @@ COPY . /usr/src/app
 RUN cat /usr/src/app/public/images/logo.txt
 
 # ---- Dependencies ---------------------------------------
-RUN bash build/deps-apt.sh
-RUN bash build/deps-node-update.sh
+RUN bash build/build.sh  && rm -rf ${APP_SRC}/build
 RUN npm install --unsafe-perm
 
 # ---- Start ----------------------------------------------
