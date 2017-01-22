@@ -1,0 +1,96 @@
+// colors
+$color_arapawa_90_approx:       #000063;
+$color_bastille_98_approx:      #231f2d;
+$color_jacarta_approx:          #3f2c6d;
+$color_violent_violet_approx:   #2d195d;
+$color_bastille_approx:         #231f2d;
+$color_jacksons_purple_approx:  #312394;
+$color_kimberly_30_approx:      rgba(112, 112, 162, 0.3);
+$color_chetwode_blue_approx:    #9386d2;
+$color_purple_heart_approx:     #683dc7;
+$color_victoria_approx:         #5a4383;
+$color_red_approx:              #ff0a0a;
+$color_white:                   #fbfbfb;
+
+#header {
+	background: $color_arapawa_90_approx;
+
+	.button {
+		border-left: 2px solid $color_jacarta_approx;
+		border-right: 2px solid $color_jacarta_approx;
+		&:hover {
+			border-color: $color_violent_violet_approx;
+		}
+	}
+
+	> span > a > span {
+		display: none;
+	}
+
+	ul.dropdown-menu {
+		background: $color_bastille_98_approx;
+		background: $color_bastille_approx;
+	}
+
+	li.open .button {
+		background: $color_bastille_approx;
+		border-color: $color_bastille_approx;
+	}
+}
+
+.notification-error {
+	border-color: $color_red_approx;
+}
+
+#btn-deploy.disabled {
+	background: $color_jacksons_purple_approx;
+
+	+ #btn-deploy-options {
+		background: $color_kimberly_30_approx;
+
+		&:hover {
+			background: $color_chetwode_blue_approx;
+		}
+	}
+}
+
+.deploy-button-group.open #btn-deploy-options {
+	background: $color_bastille_approx !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+	background: $color_purple_heart_approx;
+	border-bottom: 1px solid $color_victoria_approx;
+}
+
+.editor-tray-toolbar button.primary {
+	border-color: $color_purple_heart_approx;
+	background: $color_purple_heart_approx;
+
+  &:not(.disabled):not(.ui-button-disabled):hover {
+      border-color: $color_violent_violet_approx;
+      background: $color_white;
+      color: $color_violent_violet_approx !important;
+  }
+}
+
+span.logo {
+	line-height: 25px;
+
+	img {
+		height: 21px;
+	}
+}
+
+.deploy-button {
+	border-color: $color_chetwode_blue_approx;
+	background: $color_chetwode_blue_approx;
+
+	&:hover {
+    background: $color_purple_heart_approx;
+	}
+}
+
+g.link_selected path.link_line {
+    stroke: $color_purple_heart_approx;
+}

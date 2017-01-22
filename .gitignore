@@ -1,10 +1,4 @@
 .git
 .idea
 .sass-cache
-/config/
 /node_modules/
-/private/
-/tests/
-.editorconfig
-.scss-lint.yml
-Gruntfile.js

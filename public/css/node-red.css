@@ -45,9 +45,8 @@ span.logo {
     height: 21px; }
 
 .deploy-button {
-  border-color: #2d195d;
-  background: #fbfbfb;
-  color: #2d195d !important; }
+  border-color: #9386d2;
+  background: #9386d2; }
   .deploy-button:hover {
     background: #683dc7; }
 
