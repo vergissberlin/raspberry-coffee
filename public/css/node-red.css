@@ -1,67 +1,57 @@
 #header {
-  background: rgba(0,0,100,0.9);
-}
-
-#header > span > a > span {
-  display: none;
-}
-
-#header ul.dropdown-menu {
-    background: rgba(35, 31, 45, 0.98);
-}
-
-#header .button {
+  background: #000063; }
+  #header .button {
     border-left: 2px solid #3f2c6d;
-    border-right: 2px solid #3f2c6d;
-}
-
-#header .button:hover {
-    border-color: #2d195d;
-}
-
-#header li.open .button {
+    border-right: 2px solid #3f2c6d; }
+    #header .button:hover {
+      border-color: #2d195d; }
+  #header > span > a > span {
+    display: none; }
+  #header ul.dropdown-menu {
     background: #231f2d;
-    border-color: #231f2d;
-}
-
-#header ul.dropdown-menu {
+    background: #231f2d; }
+  #header li.open .button {
     background: #231f2d;
-}
-
-#btn-deploy.disabled {
-    background: #312394;
-}
-
-#btn-deploy.disabled+#btn-deploy-options {
-    background: rgba(112, 112, 162, 0.3);
-}
-
-#btn-deploy.disabled+#btn-deploy-options:hover {
-    background: #9386d2;
-}
-
-.deploy-button-group.open #btn-deploy-options {
-    background: #231f2d !important;
-}
-
-.ui-dialog .ui-dialog-titlebar {
-    background: #683dc7;
-    border-bottom: 1px solid #5a4383;
-}
-
-.editor-tray-toolbar button.primary {
-    border-color: #683dc7;
-    background: #683dc7;
-}
-
-span.logo {
-    line-height: 25px;
-}
-
-span.logo img {
-    height: 21px;
-}
+    border-color: #231f2d; }
 
 .notification-error {
-    border-color: rgb(255, 10, 10);
-}
+  border-color: #ff0a0a; }
+
+#btn-deploy.disabled {
+  background: #312394; }
+  #btn-deploy.disabled + #btn-deploy-options {
+    background: rgba(112, 112, 162, 0.3); }
+    #btn-deploy.disabled + #btn-deploy-options:hover {
+      background: #9386d2; }
+
+.deploy-button-group.open #btn-deploy-options {
+  background: #231f2d !important; }
+
+.ui-dialog .ui-dialog-titlebar {
+  background: #683dc7;
+  border-bottom: 1px solid #5a4383; }
+
+.editor-tray-toolbar button.primary {
+  border-color: #683dc7;
+  background: #683dc7; }
+  .editor-tray-toolbar button.primary:not(.disabled):not(.ui-button-disabled):hover {
+    border-color: #2d195d;
+    background: #fbfbfb;
+    color: #2d195d !important; }
+
+span.logo {
+  line-height: 25px; }
+  span.logo img {
+    height: 21px; }
+
+.deploy-button {
+  border-color: #2d195d;
+  background: #fbfbfb;
+  color: #2d195d !important; }
+  .deploy-button:hover {
+    background: #683dc7; }
+
+g.link_selected path.link_line {
+  stroke: #683dc7; }
+
+/*# sourceMappingURL=node-red.css.map */

@@ -15,10 +15,17 @@
 
 module.exports = {
 
-		dist: {
-			files: {
-				'<%= package.directories.public.css %>/style.css': '<%= package.directories.private.scss %>/style.scss'
-			}
+
+	dist: {
+		options: {
+			style: 'nested',
+			update: true
+		},
+
+		files: {
+			'<%= package.directories.public.css %>/node-red.css': '<%= package.directories.private.scss %>/node-red.scss',
+			'<%= package.directories.public.css %>/style.css': '<%= package.directories.private.scss %>/style.scss'
 		}
+	}
 
 };

@@ -9,6 +9,13 @@
 	],
 	"prod": [
 		"sass",
+		"cssmin"
+	],
+	"sync": [
+		"exec:sync"
+	],
+	"deploy": [
+		"sass",
 		"cssmin",
 		"exec:deploy"
 	]
