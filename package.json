@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "git@github.com:vergissberlin/coffee-bin.git",
   "scripts": {
-    "start": "sh app/app.sh"
+    "start": "sh app/start/start.sh.sh"
   },
   "directories": {
     "app": {
