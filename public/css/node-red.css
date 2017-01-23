@@ -50,7 +50,18 @@ span.logo {
   .deploy-button:hover {
     background: #683dc7; }
 
-g.link_selected path.link_line {
-  stroke: #683dc7; }
+.link_group_active .link_port,
+g.link_selected path.link_line,
+.drag_line,
+.drag_line_hidden,
+.group-box-active,
+.lasso,
+.node_selected,
+.node_tools_hovered,
+.port_hovered {
+  stroke: #683dc7 !important; }
+
+.port_hovered {
+  fill: #683dc7; }
 
 /*# sourceMappingURL=node-red.css.map */

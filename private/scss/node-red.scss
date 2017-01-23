@@ -91,6 +91,18 @@ span.logo {
 	}
 }
 
-g.link_selected path.link_line {
-    stroke: $color_purple_heart_approx;
+.link_group_active .link_port,
+g.link_selected path.link_line,
+.drag_line,
+.drag_line_hidden,
+.group-box-active,
+.lasso,
+.node_selected,
+.node_tools_hovered,
+.port_hovered {
+    stroke: $color_purple_heart_approx !important;
+}
+
+.port_hovered {
+    fill: $color_purple_heart_approx
 }
