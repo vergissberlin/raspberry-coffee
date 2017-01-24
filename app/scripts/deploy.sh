@@ -9,9 +9,9 @@
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # 1. Update repository
-cd /data/coffee-bin &&\
-git checkout master &&\
+cd /data/${APP_NAME} &&\
 git pull &&\
+git checkout ${GIT_BRANCH} &&\
 
 # 2. Copy flow file
 cat /usr/src/app/app/node-red/flows.json > app/node-red/flows.json &&\

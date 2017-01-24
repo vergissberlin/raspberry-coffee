@@ -23,19 +23,18 @@ messageInfo "Create directories"
 
 mkdir -p ~/.ssh \
 	&& messageOk "SSH directory created." \
-	|| messageError 1 "Something went wrong on creating ssh directory."
+	|| messageInfo "SSH directory allready exists."
 
 mkdir -p /data/ssh \
   	&& messageOk "Persistent ssh directory created." \
-  	|| messageError 1 "Something went wrong on creating persistent ssh directory."
+		|| messageInfo "Persistent ssh directory allready exists."
 
 mkdir -p /data/backup/node-red \
 	&& messageOk "Backup directory created." \
-	|| messageError 1 "Something went wrong on creating backup directory."
+	|| messageInfo "Backup directory allready exists."
 
 mkdir -p /data/log \
 	&& messageOk "Log directory created." \
-	|| messageError 1 "Something went wrong on creating log directory."
-
+	|| messageInfo "Log directory allready exists."
 
 exit 0;

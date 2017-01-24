@@ -9,15 +9,15 @@
 # @author     André Lademann <vergissberlin@googlemail.com>
 
 # 1. Update repository
-cd /data/coffee-bin &&\
-git checkout master &&\
+cd /data/${APP_NAME} &&\
+git checkout ${GIT_BRANCH} &&\
 git pull &&\
 
 # 2. Create backup
-cat /data/app/node-red/flows.json > /data/backup/node-red/flows_backup.json &&\
+/bin/bash /usr/src/app/app/scripts/backup.sh &&\
 
 # 3. Copy flow file
-cat /data/coffee-bin/app/node-red/flows.json > /data/node-red/flows.json &&\
+cat /data/${APP_NAME}/app/node-red/flows.json > /usr/src/app/app/node-red/flows.json &&\
 
 # 4. Restart Node-RED
-om2 restart node-red
+pm2 restart ${APP_NAME}
