@@ -37,7 +37,7 @@ messageInfo "Config npm"
 messageInfo "Starting pm2"
 
 # Link pm2 to keymetrics API and name instance resin DEVICE ID
-pm2 link $PM2_SECRET_KEY $PM2_PUBLIC_KEY $RESIN_DEVICE_UUID
+pm2 link $PM2_SECRET_KEY $PM2_PUBLIC_KEY $HOSTNAME
 
 # Start pm2 process to run NodeRED forever
 pm2 start /usr/bin/node-red \
