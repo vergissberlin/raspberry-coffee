@@ -1027,7 +1027,9 @@
             [
                 "c71c458b.5c2338"
             ],
-            []
+            [
+                "c71c458b.5c2338"
+            ]
         ]
     },
     {
@@ -1049,5 +1051,48 @@
         "x": 130,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "b9c16ec8.d919",
+        "type": "inject",
+        "z": "8f52f3d0.cfa4",
+        "name": "ssh",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "b72f587e.24dcb8"
+            ]
+        ]
+    },
+    {
+        "id": "b72f587e.24dcb8",
+        "type": "exec",
+        "z": "8f52f3d0.cfa4",
+        "command": "cat /root/.ssh/id_rsa.pub",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "",
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "c71c458b.5c2338"
+            ],
+            [
+                "c71c458b.5c2338"
+            ],
+            [
+                "c71c458b.5c2338"
+            ]
+        ]
     }
 ]
