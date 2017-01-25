@@ -1075,13 +1075,13 @@
         "id": "b72f587e.24dcb8",
         "type": "exec",
         "z": "8f52f3d0.cfa4",
-        "command": "cat /root/.ssh/id_rsa.pub",
+        "command": "echo $APP_NAME $GIT_REPOSITORY",
         "addpay": true,
         "append": "",
         "useSpawn": "",
         "timer": "",
         "name": "",
-        "x": 430,
+        "x": 480,
         "y": 280,
         "wires": [
             [
