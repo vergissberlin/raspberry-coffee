@@ -173,7 +173,7 @@
         "crontab": "",
         "once": false,
         "x": 170,
-        "y": 120,
+        "y": 420,
         "wires": [
             [
                 "e7c83c0b.e7bd9"
@@ -192,7 +192,7 @@
         "crontab": "",
         "once": false,
         "x": 170,
-        "y": 200,
+        "y": 500,
         "wires": [
             [
                 "8b57953c.121a08"
@@ -210,7 +210,7 @@
         "timer": "",
         "name": "",
         "x": 410,
-        "y": 120,
+        "y": 420,
         "wires": [
             [
                 "ce6bfdf6.64da2"
@@ -231,8 +231,8 @@
         "active": true,
         "console": "false",
         "complete": "false",
-        "x": 670,
-        "y": 280,
+        "x": 690,
+        "y": 540,
         "wires": []
     },
     {
@@ -246,7 +246,7 @@
         "timer": "",
         "name": "",
         "x": 420,
-        "y": 200,
+        "y": 500,
         "wires": [
             [
                 "ce6bfdf6.64da2"
@@ -342,8 +342,8 @@
         "name": "",
         "url": "/info",
         "method": "get",
-        "x": 180,
-        "y": 560,
+        "x": 880,
+        "y": 880,
         "wires": [
             [
                 "a835d5f9.b67238"
@@ -357,8 +357,8 @@
         "name": "Os Info",
         "func": "msg.payload = {\n    freemem: context.global.os.freemem(),\n    totalmem: context.global.os.totalmem(),\n    loadavg: context.global.os.loadavg(),\n    uptime: context.global.os.uptime()\n}\nreturn msg;",
         "outputs": 1,
-        "x": 377,
-        "y": 560,
+        "x": 1060,
+        "y": 880,
         "wires": [
             [
                 "d9f25f82.33e8d"
@@ -370,8 +370,8 @@
         "type": "http response",
         "z": "8f52f3d0.cfa4",
         "name": "",
-        "x": 650,
-        "y": 560,
+        "x": 1230,
+        "y": 880,
         "wires": []
     },
     {
@@ -386,7 +386,7 @@
         "crontab": "",
         "once": false,
         "x": 170,
-        "y": 280,
+        "y": 580,
         "wires": [
             [
                 "23b424f1.5bab6c"
@@ -404,50 +404,7 @@
         "timer": "",
         "name": "",
         "x": 410,
-        "y": 280,
-        "wires": [
-            [
-                "ce6bfdf6.64da2"
-            ],
-            [
-                "ce6bfdf6.64da2"
-            ],
-            [
-                "ce6bfdf6.64da2"
-            ]
-        ]
-    },
-    {
-        "id": "1568826a.8f39ee",
-        "type": "inject",
-        "z": "8f52f3d0.cfa4",
-        "name": "init",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "x": 170,
-        "y": 440,
-        "wires": [
-            [
-                "1fdb385b.e7d548"
-            ]
-        ]
-    },
-    {
-        "id": "1fdb385b.e7d548",
-        "type": "exec",
-        "z": "8f52f3d0.cfa4",
-        "command": "sh app/scripts/init.sh",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "",
-        "timer": "",
-        "name": "",
-        "x": 420,
-        "y": 440,
+        "y": 580,
         "wires": [
             [
                 "ce6bfdf6.64da2"
@@ -850,7 +807,7 @@
         "crontab": "",
         "once": false,
         "x": 170,
-        "y": 360,
+        "y": 660,
         "wires": [
             [
                 "a5054760.cb8c48"
@@ -868,13 +825,17 @@
         "timer": "",
         "name": "",
         "x": 410,
-        "y": 360,
+        "y": 660,
         "wires": [
             [
                 "ce6bfdf6.64da2"
             ],
-            [],
-            []
+            [
+                "ce6bfdf6.64da2"
+            ],
+            [
+                "ce6bfdf6.64da2"
+            ]
         ]
     },
     {
@@ -883,7 +844,7 @@
         "z": "8f52f3d0.cfa4",
         "name": "restart container",
         "x": 420,
-        "y": 700,
+        "y": 880,
         "wires": [
             [
                 "e30770c0.0eb67"
@@ -897,7 +858,7 @@
         "name": "resin.io",
         "info": "",
         "x": 114,
-        "y": 626,
+        "y": 806,
         "wires": []
     },
     {
@@ -912,7 +873,7 @@
         "crontab": "",
         "once": false,
         "x": 170,
-        "y": 700,
+        "y": 880,
         "wires": [
             [
                 "b07ad58e.a81a18"
@@ -928,7 +889,7 @@
         "console": "false",
         "complete": "false",
         "x": 630,
-        "y": 700,
+        "y": 880,
         "wires": []
     },
     {
@@ -937,7 +898,7 @@
         "z": "8f52f3d0.cfa4",
         "name": "reboot device",
         "x": 420,
-        "y": 760,
+        "y": 940,
         "wires": [
             [
                 "e30770c0.0eb67"
@@ -956,11 +917,137 @@
         "crontab": "",
         "once": false,
         "x": 170,
-        "y": 760,
+        "y": 940,
         "wires": [
             [
                 "3832330f.41324c"
             ]
         ]
+    },
+    {
+        "id": "4bcda927.9d1868",
+        "type": "comment",
+        "z": "8f52f3d0.cfa4",
+        "name": "Init",
+        "info": "",
+        "x": 110,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c71c458b.5c2338",
+        "type": "debug",
+        "z": "8f52f3d0.cfa4",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 690,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "442fbd86.9f1264",
+        "type": "inject",
+        "z": "8f52f3d0.cfa4",
+        "name": "init",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "f7f22b28.d8fba8"
+            ]
+        ]
+    },
+    {
+        "id": "f7f22b28.d8fba8",
+        "type": "exec",
+        "z": "8f52f3d0.cfa4",
+        "command": "sh app/scripts/init.sh",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "",
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "c71c458b.5c2338"
+            ],
+            [
+                "c71c458b.5c2338"
+            ],
+            [
+                "c71c458b.5c2338"
+            ]
+        ]
+    },
+    {
+        "id": "1a866fd0.9555b",
+        "type": "inject",
+        "z": "8f52f3d0.cfa4",
+        "name": "clone",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "102f0e5c.69eff2"
+            ]
+        ]
+    },
+    {
+        "id": "102f0e5c.69eff2",
+        "type": "exec",
+        "z": "8f52f3d0.cfa4",
+        "command": "sh app/scripts/init.sh",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "",
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "c71c458b.5c2338"
+            ],
+            [
+                "c71c458b.5c2338"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9bd9cca2.b4afc",
+        "type": "comment",
+        "z": "8f52f3d0.cfa4",
+        "name": "System info",
+        "info": "",
+        "x": 870,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "3ca85f17.b7499",
+        "type": "comment",
+        "z": "8f52f3d0.cfa4",
+        "name": "Deployment",
+        "info": "",
+        "x": 130,
+        "y": 340,
+        "wires": []
     }
 ]
