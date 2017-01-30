@@ -30,16 +30,22 @@ messageInfo "Config npm"
 	|| messageError 1 "Something went wrong on config npm."
 
 
-
 ########################################################################################################################
-# Start packages
+# Start application
 #
-messageInfo "Starting pm2"
+messageInfo "Start the application"
 
-# Link pm2 to keymetrics API and name instance resin DEVICE ID
-pm2 link $PM2_SECRET_KEY $PM2_PUBLIC_KEY $HOSTNAME
+# 1. Link pm2 to keymetrics
+if printenv PM2_SECRET_KEY >/dev/null; then
+	messageInfo "Link pm2 to keymetrics API and name instance resin DEVICE ID"
+	pm2 link $PM2_SECRET_KEY $PM2_PUBLIC_KEY $HOSTNAME \
+    && messageOk "PM2 is \"${blue}linked to keymetrics${norm}\"." \
+    || messageError 65 "Error while linking pm2 to keymetrics."
+else
+	messageInfo "No keymetrics credentials defined."
+fi
 
-# Start pm2 process to run NodeRED forever
+# 2. Start pm2
 pm2 start /usr/bin/node-red \
  	--name ${APP_NAME} \
  	-- \
@@ -49,6 +55,9 @@ pm2 start /usr/bin/node-red \
 	    && messageOk "Start node-red with version \"${blue}${APP_NAME}${norm}\" successful." \
 	    || messageError 1 "Error while start NodeRED."
 
-pm2 info ${APP_NAME}
+# 3. Show status
+${APP_BIN}/pm2 info ${APP_VERSION} \
+    && messageOk "Show status of application \"${blue}${APP_VERSION}${norm}\" successful." \
+    || messageError 1 "Error while showing application status."
 
 exit 0;
