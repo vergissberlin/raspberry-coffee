@@ -1,7 +1,5 @@
 module.exports = {
 
-
-
     // Directories Node-RED
     // --------------------
 
@@ -14,12 +12,11 @@ module.exports = {
     nodesDir: '/usr/src/app/node-red-nodes/node_modules/',
 
 
-
     // Configuration Node-RED
     // ----------------------
 
     // Port
-    uiPort: process.env.PORT || 80 ,
+    uiPort: process.env.PORT || 80,
 
     // Retry time in milliseconds for MQTT connections
     mqttReconnectTime: 15000,

@@ -16,6 +16,8 @@ set -e
 . ${APP_SRC}/app/lib/console.sh
 . ${APP_SRC}/app/lib/validate.sh
 
+validateEnvironment APP_SRC
+
 ########################################################################################################################
 # Start application
 #
