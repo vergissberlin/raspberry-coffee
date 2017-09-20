@@ -20,7 +20,8 @@ if printenv GIT_REPOSITORY >/dev/null; then
 
   # 3. Store ssh key on persitent mount
   cp -u /root/.ssh/id_rsa /data/ssh/id_rsa &&\
-  cp -u /root/.ssh/id_rsa.pub /data/ssh/id_rsa.pub &&\
+  cp -u /root/.ssh/id_rsa.pub /data/ssh/id_rsa.pub
+
 else
   echo "Please set the environment Varialbes for git deployment!";
   exit 1;

@@ -20,6 +20,7 @@ npm i \
     node-red-contrib-play \
     node-red-contrib-resinio \
     node-red-contrib-say \
+		node-red-contrib-slack \
     node-red-node-feedparser \
     node-red-node-xmpp
 
