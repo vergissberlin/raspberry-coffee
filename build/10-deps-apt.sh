@@ -15,7 +15,8 @@ mkdir -p ~/.ssh
 # Install dependencies
 apt-get update &&\
 apt-get install \
-    git-core \
+		curl \
+		git-core \
     firmware-ralink \
     festival \
     festival-doc \
@@ -26,7 +27,15 @@ apt-get install \
     python-rpi.gpio \
     sox \
     vim \
+		wget \
     wireless-tools
+
+# Current nodejs version
+echo prefix = ~/local >> ~/.npmrc
+curl https://www.npmjs.org/install.sh | sh
+
+apt-get install \
+    nodered \
 
 # Configure dependencies
 echo -e "\nsyntax on\nset background=dark\nset mouse=a\n" >> /etc/vim/vimrc
