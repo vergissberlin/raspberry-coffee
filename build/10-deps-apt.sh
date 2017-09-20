@@ -30,13 +30,13 @@ apt-get install \
 		wget \
     wireless-tools
 
-# Current nodejs version
+# Install nodejs in version 6
 npm cache clean -f
 npm install -g n
-n stable
+n 6
 
 # Node-RED
-npm install -g node-red
+npm install -g --unsafe-perm node-red
 
 # Configure dependencies
 echo -e "\nsyntax on\nset background=dark\nset mouse=a\n" >> /etc/vim/vimrc
