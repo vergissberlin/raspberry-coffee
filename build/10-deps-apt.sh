@@ -31,11 +31,12 @@ apt-get install \
     wireless-tools
 
 # Current nodejs version
-echo prefix = ~/local >> ~/.npmrc
-curl https://www.npmjs.org/install.sh | sh
+npm cache clean -f
+npm install -g n
+n stable
 
-apt-get install \
-    nodered \
+# Node-RED
+npm install -g node-red
 
 # Configure dependencies
 echo -e "\nsyntax on\nset background=dark\nset mouse=a\n" >> /etc/vim/vimrc
