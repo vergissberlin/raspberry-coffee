@@ -1,6 +1,6 @@
 {
   "name": "coffee-bin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Coffee bin overflow alarm",
   "author": "André Lademann <vergissberlin@googlemail.com>",
   "license": "MIT",
