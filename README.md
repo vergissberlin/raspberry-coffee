@@ -46,3 +46,4 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 #### Password generation
 
 ``node-red-admin hash-pw``
+``docker-compose build --no-cache node-red``

@@ -2,7 +2,6 @@ version: '3.2'
 
 services:
   node-red:
-    # build: .
     image: nodered/node-red-docker
     environment:
       - ADMIN_USER

@@ -1,25 +1,17 @@
-FROM nodered/node-red-docker
+FROM nodered/node-red-docker:slim-v8
 
 USER root
 
-RUN apt-get update &&\
-    apt-get install -y \
-		curl \
-		git-core \
-        mc \
-        vim \
-		wget
-
-USER node-red
-
-RUN npm install \
-        node-red-contrib-slack \
-        node-red-dashboard \
-        node-red-node-mongodb \
-        node-red-node-feedparser \
-        node-red-node-xmpp
+RUN apk update &&\
+    apk add \
+        curl \
+        g++ \
+        gcc \
+        git \
+        make \
+        python \
+        wget
 
 COPY setup/ /
-
-#COPY data/package.json /data/package.json
-#COPY data/settings.js /data/settings.js
+RUN chown -R 1001:1001 /data /usr/src/node-red 
+USER node-red
