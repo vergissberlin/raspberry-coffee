@@ -42,3 +42,7 @@ If you wanna use git to save your flows, you have to install _git_ and create a 
 3.  Monitoring
     -   PM2_SECRET_KEY
     -   PM2_PUBLIC_KEY
+
+#### Password generation
+
+``node-red-admin hash-pw``
