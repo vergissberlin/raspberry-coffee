@@ -1,12 +1,16 @@
 {
   "name": "coffee-bin",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Coffee bin overflow alarm",
   "author": "André Lademann <vergissberlin@googlemail.com>",
   "license": "MIT",
-  "repository": "git@github.com:vergissberlin/coffee-bin.git",
+  "repository":  {
+    "type": "git",
+    "url": "https://github.com/vergissberlin/coffee-bin.git"
+  },
+  "main": "node_modules/node-red/red/red.js",
   "scripts": {
-    "start": "bash app/app.sh"
+    "start": "node $NODE_OPTIONS node_modules/node-red/red.js -v $FLOWS"
   },
   "directories": {
     "app": {
@@ -30,7 +34,13 @@
       "reports": "tests/reports"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-red": "0.19.5",
+    "node-red-node-msgpack": "*",
+    "node-red-node-base64": "*",
+    "node-red-node-suncalc": "*",
+    "node-red-node-random": "*"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-available-tasks": "^0.6.3",
@@ -45,5 +55,8 @@
     "load-grunt-config": "^0.19.2",
     "mjml": "^3.1.1",
     "time-grunt": "^1.4.0"
+  },
+  "engines": {
+      "node": "4.*.*"
   }
 }

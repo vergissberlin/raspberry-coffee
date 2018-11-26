@@ -1,0 +1,31 @@
+version: '3.2'
+
+services:
+  node-red:
+    # build: .
+    image: nodered/node-red-docker
+    environment:
+      - ADMIN_USER
+      - ADMIN_PASSWORD
+      - PORT
+      - SECRET
+      - LETSENCRYPT_EMAIL
+      - LETSENCRYPT_HOST=${DOMAINS}
+      - VIRTUAL_HOST=${DOMAINS}
+      - VIRTUAL_NETWORK=${NETWORK}
+      - VIRTUAL_PORT=${PORT}
+    links:
+      - mongo
+    restart: always
+
+  mongo:
+    image: "mongo"
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+
+networks:
+  default:
+    external:
+      name: ${NETWORK}
