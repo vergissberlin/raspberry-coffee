@@ -9,6 +9,7 @@ RUN apk update &&\
         gcc \
         git \
         make \
+        openssh \
         python \
         wget
 
