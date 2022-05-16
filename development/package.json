@@ -42,7 +42,7 @@
     "node-red-node-random": "*"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "1.5.3",
     "grunt-available-tasks": "^0.6.3",
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-sass": "^1.0.0",
